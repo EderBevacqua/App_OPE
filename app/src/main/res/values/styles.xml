@@ -1,0 +1,42 @@
+<resources>
+    <!-- Tema com Action Bar. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+
+        <item name="colorAccent">#037DDA</item>
+
+        <item name="buttonStyle">@style/menuBotao</item>
+    </style>
+
+    <style name="menuBotao" parent="Widget.AppCompat.Button">
+        <item name="android:background">#B8B3B3</item>
+
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+
+    <style name="MyProgres" parent="AppTheme">
+        <item name="colorAccent">#00f</item>
+
+    </style>
+
+
+</resources>
+
+
+
+
+
+
+
+
+
+
+
