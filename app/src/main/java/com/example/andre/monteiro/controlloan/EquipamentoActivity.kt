@@ -27,7 +27,7 @@ class EquipamentoActivity : DebugActivity(){
         setContentView(R.layout.activity_equipamento)
 
         if (intent.getSerializableExtra("Equipamentos") is Equipamento)
-            equipamento = intent.getSerializableExtra("Equipamentos") as Equipamento
+                equipamento = intent.getSerializableExtra("Equipamentos") as Equipamento
         Toast.makeText(context,equipamento?.marca,Toast.LENGTH_SHORT).show()
 
         setSupportActionBar(toolbar)
