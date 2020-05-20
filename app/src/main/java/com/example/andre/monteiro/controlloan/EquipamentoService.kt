@@ -11,7 +11,6 @@ import java.net.URL
 import kotlin.Result.Companion.success
 
 object EquipamentoService {
-
     val host = "https://ederbevacqua.pythonanywhere.com"
     val TAG = "WS_Equipamentos"
 
@@ -29,6 +28,22 @@ object EquipamentoService {
             var dao = DatabaseManager.getEquipamentoDAO()
             dao.findAll()
         }
+    }
+
+    fun getEquipamento (context: Context, id: Long): Equipamento? {
+
+        if (AndroidUtils.isInternetDisponivel(context)) {
+            val url = "$host/equipamentos/${id}"
+            val json = HttpHelper.get(url)
+            val equipamento = parserJson<Equipamento>(json)
+
+            return equipamento
+        } else {
+            val dao = DatabaseManager.getEquipamentoDAO()
+            val equipamento = dao.getById(id)
+            return equipamento
+        }
+
     }
 
     fun save(equipamento: Equipamento, context: Context): Response {

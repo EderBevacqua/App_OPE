@@ -45,15 +45,25 @@ class TelaEquipamentoActivity : DebugActivity(), NavigationView.OnNavigationItem
             runOnUiThread {
                 recyclerEquipamento?.adapter =
                     EquipamentoAdapter(equipamentos) { onClickEquipamento(it) }
+                    enviaNotificacao(this.equipamentos.get(0))
 
             }
         }.start()
     }
 
+    fun enviaNotificacao(equipamento: Equipamento) {
+        // Intent para abrir tela quando clicar na notificação
+        val intent = Intent(this, EquipamentoActivity::class.java)
+        // parâmetros extras
+        intent.putExtra("Equipamento", equipamento)
+        // Disparar notificação
+        NotificationUtil.create(this, 1, intent, "Controlloan", "Equipamento numero ${equipamento.numeroEquipamento} esta quebrado.")
+    }
+
     fun onClickEquipamento(equipamento: Equipamento) {
         Toast.makeText(context,"Clicou em ${equipamento.marca}",Toast.LENGTH_SHORT).show()
         val intent = Intent(context, EquipamentoActivity::class.java)
-        intent.putExtra("Equipamentos", equipamento)
+        intent.putExtra("Equipamento", equipamento)
         startActivityForResult(intent, REQUEST_REMOVE)
     }
 
