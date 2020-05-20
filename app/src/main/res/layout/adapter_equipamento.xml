@@ -17,34 +17,22 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/cardNome"
-            android:layout_marginTop="16dp"
-            android:text="20dp" />
-        <FrameLayout
+            android:id="@+id/cardNumeroEquipamento"
+            android:layout_marginStart="20dp" />
+        <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <ImageView
-                android:id="@+id/cardImg"
-                android:layout_width="390dp"
-                android:layout_height="150dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="6dp" />
-            <ProgressBar
-                android:id="@+id/cardProgress"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                style="@android:style/Widget.ProgressBar.Small"
-                android:layout_gravity="center|center_vertical"
-                android:layout_marginRight="6dp"
-                android:visibility="invisible"/>
-
-        </FrameLayout>
-
+            android:layout_height="wrap_content"
+            android:id="@+id/cardMarca"
+            android:layout_marginStart="20dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardModelo"
+            android:layout_marginStart="20dp" />
 
     </LinearLayout>
-
 </androidx.cardview.widget.CardView>

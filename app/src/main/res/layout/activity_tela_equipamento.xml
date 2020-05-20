@@ -7,19 +7,17 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context="com.example.andre.monteiro.contolloan.TelaEquipamentoActivity">
+        tools:context=".TelaEquipamentoActivity">
 
         <include layout="@layout/toolbar" />
 
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="match_parent">
-
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerEquipamento"
@@ -46,8 +44,6 @@
         android:fitsSystemWindows="true"
         app:headerLayout="@layout/menu_lateral_cabecalho"
         app:menu="@menu/menu_lateral">
-
     </com.google.android.material.navigation.NavigationView>
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

@@ -8,4 +8,20 @@
     <string name="action_config">Configurações</string>
     <string name="nav_close">fechar</string>
     <string name="nav_open">Abrir</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="item">Item</string>
+    <string name="canlendario">Calendario</string>
+    <string name="contatos">Contatos</string>
+    <string name="nomeUsuario">Usuário</string>
+    <string name="senhaUsuario">Senha</string>
+    <string name="solicitarEmrpestimo">Solicitar Emrpéstimo</string>
+    <string name="usuarios">Usuários</string>
+    <string name="emprestimos">Empréstimos</string>
+    <string name="equipamentos">Equipamentos</string>
+    <string name="sair">Sair</string>
+    <string name="lembrar_login">Lembrar Login</string>
+    <string name="login">Login</string>
+    <string name="numero_do_equipamento">Número do Equipamento</string>
+    <string name="remover">Remover</string>
+    <string name="nome_usuario">Nome Usuário</string>
 </resources>

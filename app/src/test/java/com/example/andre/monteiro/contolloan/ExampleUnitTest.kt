@@ -1,4 +1,4 @@
-package com.example.andre.monteiro.contolloan
+package com.example.andre.monteiro.controlloan
 
 import org.junit.Test
 

@@ -2,15 +2,18 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.andre.monteiro.controlloan">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".ControlloanApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true" >
 
         <activity
             android:name=".MainActivity"
@@ -26,15 +29,26 @@
             android:name=".TelaInicialActivity"
             android:theme="@style/AppTheme.Toolbar"
             android:parentActivityName=".TelaInicialActivity" />
-        <activity android:name="com.example.andre.monteiro.contolloan.TelaEquipamentoActivity"
-            android:theme="@style/AppTheme.Toolbar"
-            android:parentActivityName=".TelaInicialActivity">
-        </activity>
         <activity
-            android:name="com.example.andre.monteiro.contolloan.EquipamentoActivity"
+            android:name=".TelaEquipamentoActivity"
             android:theme="@style/AppTheme.Toolbar"
-            android:parentActivityName="com.example.andre.monteiro.contolloan.TelaEquipamentoActivity" />
+            android:parentActivityName=".TelaInicialActivity"/>
+        <activity
+            android:name=".TelaUsuarioActivity"
+            android:theme="@style/AppTheme.Toolbar"
+            android:parentActivityName=".TelaUsuarioActivity" />
+        <activity
+            android:name=".TelaEmprestimoActivity"
+            android:theme="@style/AppTheme.Toolbar"
+            android:parentActivityName=".TelaEmprestimoActivity" />
+        <activity
+            android:name=".EquipamentoCadastroActivity"
+            android:theme="@style/AppTheme.Toolbar"
+            android:parentActivityName=".EquipamentoCadastroActivity" />
+        <activity
+            android:name=".EquipamentoActivity"
+            android:theme="@style/AppTheme.Toolbar"
+            android:parentActivityName=".TelaEquipamentoActivity" />
 
     </application>
-
 </manifest>

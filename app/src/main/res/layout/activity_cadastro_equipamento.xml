@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".EquipamentoCadastroActivity">
+
+    <!--toolbar-->
+    <include layout="@layout/toolbar" />
+
+    <EditText
+        android:id="@+id/numeroEquipamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/numero_do_equipamento"
+        android:inputType="textPersonName"/>
+
+    <EditText
+        android:id="@+id/marca"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Marca"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/modelo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Modelo"
+        android:inputType="textPersonName" />
+    <RadioGroup
+        android:id="@+id/radioStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+    <RadioButton
+        android:id="@+id/statusAtivoEquipamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="ATIVO"
+        android:checked="true" />
+    <RadioButton
+        android:id="@+id/statusInativoEquipamento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="INATIVO" />
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/salvarEquipamento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="salvar" />
+
+</LinearLayout>

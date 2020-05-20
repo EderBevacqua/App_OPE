@@ -4,30 +4,27 @@
         <item
             android:id="@+id/nav_dashboard"
             android:icon="@drawable/ic_developer_board_black_24dp"
-            android:title="Dashboard"
+            android:title="@string/dashboard"
             android:checked="true"/>
         <item
-            android:id="@+id/nav_itens"
-            android:title="Equipamentos"
-            android:icon="@drawable/ic_computer_black_24dp" />
-
+            android:id="@+id/nav_emprestimos"
+            android:title="@string/emprestimos"
+            android:icon="@drawable/ic_emprestimos_equip_black" />
         <item
-            android:id="@+id/nav_calendario"
-            android:icon="@drawable/ic_date_range_black_24dp"
-            android:title="calendario"/>
+            android:id="@+id/nav_solicitarEmrpestimo"
+            android:icon="@drawable/ic_mobile_multiple_devices_black"
+            android:title="@string/solicitarEmrpestimo"/>
         <item
-            android:id="@+id/nav_contato"
+            android:id="@+id/nav_equipamentos"
+            android:icon="@drawable/ic_mobile_multiple_devices_black"
+            android:title="@string/equipamentos"/>
+        <item
+            android:id="@+id/nav_usuarios"
             android:icon="@drawable/ic_contacts_black_24dp"
-            android:title="contatos"/>
-        <item
-            android:id="@+id/nav_configuracao"
-            android:icon="@drawable/ic_configuracoes_black"
-            android:title="configurações"/>
+            android:title="@string/usuarios"/>
         <item
             android:id="@+id/nav_sair"
-            android:title="Sair"
+            android:title="@string/sair"
             android:icon="@drawable/ic_exit_to_app_black_48dp" />
-
     </group>
-
 </menu>

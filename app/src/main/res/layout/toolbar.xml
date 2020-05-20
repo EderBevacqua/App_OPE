@@ -5,10 +5,4 @@
     android:id="@+id/toolbar"
     android:background="?attr/colorPrimary"
     android:minHeight="?attr/actionBarSize"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-
-
-
-    >
-
-</androidx.appcompat.widget.Toolbar>
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
