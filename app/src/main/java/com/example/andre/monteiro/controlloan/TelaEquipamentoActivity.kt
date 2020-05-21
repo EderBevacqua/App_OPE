@@ -45,7 +45,7 @@ class TelaEquipamentoActivity : DebugActivity(), NavigationView.OnNavigationItem
             runOnUiThread {
                 recyclerEquipamento?.adapter =
                     EquipamentoAdapter(equipamentos) { onClickEquipamento(it) }
-                    enviaNotificacao(this.equipamentos.get(0))
+                    enviaNotificacao(this.equipamentos[0])
 
             }
         }.start()
@@ -109,8 +109,10 @@ class TelaEquipamentoActivity : DebugActivity(), NavigationView.OnNavigationItem
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
-            R.id.nav_dashboard -> {
-                Toast.makeText(this, "Clicou em Dashboard", Toast.LENGTH_SHORT).show()
+            R.id.nav_painel -> {
+                Toast.makeText(this, "Clicou em Painel", Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, TelaInicialActivity::class.java)
+                startActivity(intent)
             }
             R.id.nav_emprestimos -> {
                 Toast.makeText(this, "Clicou em Empréstimos", Toast.LENGTH_SHORT).show()

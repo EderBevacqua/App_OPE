@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.andre.monteiro.controlloan">
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
 
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:name=".ControlloanApplication"
@@ -13,8 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
-        android:usesCleartextTraffic="true" >
-
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MapasActivity" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme">
@@ -27,32 +33,41 @@
         <activity android:name=".DebugActivity" />
         <activity
             android:name=".TelaInicialActivity"
-            android:theme="@style/AppTheme.Toolbar"
-            android:parentActivityName=".TelaInicialActivity" />
+            android:parentActivityName=".TelaInicialActivity"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".TelaEquipamentoActivity"
-            android:theme="@style/AppTheme.Toolbar"
-            android:parentActivityName=".TelaInicialActivity"/>
+            android:parentActivityName=".TelaInicialActivity"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".TelaUsuarioActivity"
-            android:theme="@style/AppTheme.Toolbar"
-            android:parentActivityName=".TelaUsuarioActivity" />
+            android:parentActivityName=".TelaUsuarioActivity"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".TelaEmprestimoActivity"
-            android:theme="@style/AppTheme.Toolbar"
-            android:parentActivityName=".TelaEmprestimoActivity" />
+            android:parentActivityName=".TelaEmprestimoActivity"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".EquipamentoCadastroActivity"
-            android:theme="@style/AppTheme.Toolbar"
-            android:parentActivityName=".EquipamentoCadastroActivity" />
+            android:parentActivityName=".EquipamentoCadastroActivity"
+            android:theme="@style/AppTheme.Toolbar" />
         <activity
             android:name=".EquipamentoActivity"
-            android:theme="@style/AppTheme.Toolbar"
-            android:parentActivityName=".TelaEquipamentoActivity" />
+            android:parentActivityName=".TelaEquipamentoActivity"
+            android:theme="@style/AppTheme.Toolbar" />
+
         <service android:name=".MyFirebaseMessagingService">
             <intent-filter>
-                <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
             </intent-filter>
         </service>
+
+        <meta-data
+            android:name="com.google.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/API_KEY" />
     </application>
+
 </manifest>

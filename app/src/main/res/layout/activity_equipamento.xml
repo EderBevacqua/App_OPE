@@ -13,20 +13,40 @@
         android:padding="12dp">
 
         <TextView
-            android:text="Equipamento"
+            android:text="@string/equipamento"
             android:layout_marginTop="20dp"
             android:layout_marginBottom="20dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textAlignment="center" />
-        <ScrollView
+            android:textAlignment="center"
+            android:textSize="25sp" />
+        <TextView
+            android:id="@+id/nEquip"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:id="@+id/marcaEquip"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"/>
-        </ScrollView>
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/marcaEquip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/modeloEquip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
+        <TextView
+            android:id="@+id/situacaoEquip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textColor="#000000"
+            android:textSize="16sp" />
     </LinearLayout>
 </LinearLayout>

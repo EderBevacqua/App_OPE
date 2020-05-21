@@ -33,10 +33,10 @@ object EquipamentoService {
     fun getEquipamento (context: Context, id: Long): Equipamento? {
 
         if (AndroidUtils.isInternetDisponivel(context)) {
-            val url = "$host/equipamentos/${id}"
+            val url = "$host/api/equipamentos/localizar/${id}"
             val json = HttpHelper.get(url)
             val equipamento = parserJson<Equipamento>(json)
-
+            Log.d(TAG, json)
             return equipamento
         } else {
             val dao = DatabaseManager.getEquipamentoDAO()

@@ -2,9 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_dashboard"
+            android:id="@+id/nav_painel"
             android:icon="@drawable/ic_developer_board_black_24dp"
-            android:title="@string/dashboard"
+            android:title="@string/painel"
             android:checked="true"/>
         <item
             android:id="@+id/nav_emprestimos"
@@ -22,6 +22,10 @@
             android:id="@+id/nav_usuarios"
             android:icon="@drawable/ic_contacts_black_24dp"
             android:title="@string/usuarios"/>
+        <item
+            android:id="@+id/nav_localizacao"
+            android:icon="@drawable/ic_location_searching_black_24dp"
+            android:title="@string/localizacao"/>
         <item
             android:id="@+id/nav_sair"
             android:title="@string/sair"

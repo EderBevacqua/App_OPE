@@ -10,7 +10,7 @@ import java.io.Serializable
 class Equipamento: Serializable{
     @PrimaryKey(autoGenerate = true)
     var id: Long = 0
-    var numeroEquipamento = ""
+    var numeroEquipamento: Int  = 0
     var marca = ""
     var modelo =""
     var situacao = ""

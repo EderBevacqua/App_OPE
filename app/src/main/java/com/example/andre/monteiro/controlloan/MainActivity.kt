@@ -41,7 +41,7 @@ class MainActivity : DebugActivity() {
         val params = Bundle()
         params.putString("nome", valorUsuario)
         intent.putExtras(params)
-        intent.putExtra("numero", 10)
+        //intent.putExtra("numero", 10)
         startActivityForResult(intent, 1)
     }
 
@@ -52,4 +52,28 @@ class MainActivity : DebugActivity() {
             Toast.makeText(context, "$result", Toast.LENGTH_LONG).show()
         }
     }
+
+    override fun onResume() {
+        super.onResume()
+        // abrir a disciplina caso clique na notificação com o aplicativo fechado
+        abrirEquipamento()
+        // mostrar no log o tokem do firebase
+        //Log.d("firebase", "Firebase Token: ${Prefs.getString("FB_TOKEN")}")
+    }
+
+    fun abrirEquipamento() {
+        // verificar se existe  id da disciplina na intent
+        if (intent.hasExtra("equipamentoId")) {
+            Thread {
+                var equipamentoId = intent.getStringExtra("equipamentoId")?.toLong()!!
+                val equipamento = EquipamentoService.getEquipamento(this, equipamentoId)
+                runOnUiThread {
+                    val intentEquipamento = Intent(this, EquipamentoActivity::class.java)
+                    intentEquipamento.putExtra("Equipamento", equipamento)
+                    startActivity(intentEquipamento)
+                }
+            }.start()
+        }
+    }
+
 }

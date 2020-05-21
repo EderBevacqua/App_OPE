@@ -76,8 +76,10 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId){
-            R.id.nav_dashboard -> {
-                Toast.makeText(this, "Clicou em Dashboard", Toast.LENGTH_SHORT).show()
+            R.id.nav_painel -> {
+                Toast.makeText(this, "Clicou em Painel", Toast.LENGTH_SHORT).show()
+                val intent = Intent(context, TelaInicialActivity::class.java)
+                startActivity(intent)
             }
             R.id.nav_emprestimos -> {
                 Toast.makeText(this, "Clicou em Empréstimos", Toast.LENGTH_SHORT).show()
@@ -96,6 +98,9 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
                 Toast.makeText(this, "Clicou em Usuários", Toast.LENGTH_SHORT).show()
                 val intent = Intent(context, TelaUsuarioActivity::class.java)
                 startActivity(intent)
+            }
+            R.id.nav_localizacao -> {
+                startActivity(Intent(this, MapasActivity::class.java))
             }
             R.id.nav_sair -> {
                 Toast.makeText(this, "Clicou em sair", Toast.LENGTH_SHORT).show()

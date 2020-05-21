@@ -23,7 +23,7 @@ class EquipamentoCadastroActivity : AppCompatActivity() {
 
         salvarEquipamento.setOnClickListener {
             val equipamento = Equipamento()
-            equipamento.numeroEquipamento = numeroEquipamento.text.toString()
+            equipamento.numeroEquipamento = Integer.parseInt(numeroEquipamento.text.toString())
             equipamento.marca = marca.text.toString()
             equipamento.modelo = modelo.text.toString()
 
@@ -34,7 +34,7 @@ class EquipamentoCadastroActivity : AppCompatActivity() {
     private fun taskAtualizar(equipamento: Equipamento) {
         // Thread para salvar a equipamento
         Thread {
-            EquipamentoService.save(equipamento,context)
+            EquipamentoService.save(equipamento,this)
             runOnUiThread {
                 // após cadastrar, voltar para activity anterior
                 finish()
